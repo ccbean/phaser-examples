@@ -60,7 +60,7 @@ function create(){
     collide2 = game.add.graphics(500, 220);
     game.physics.arcade.enable(collide2);
     collide2.body.width = 50;
-    collide2.body.height = 50;    
+    collide2.body.height = 50;   
 
 }
 
@@ -119,7 +119,8 @@ function update(){
     //Collision test
     collide1.clear();
     collide1.lineStyle(2.0, 0x0000ff, 1.0);
-    collide1.beginFill(0x0000ff, 0.6);
+    //collide1.beginFill(0x0000ff, 0.6);
+    collide1.beginFill(0x0000ff, 1.0);
     collide1.drawCircle(0, 0, 50);
 
     collide2.clear();
@@ -128,12 +129,12 @@ function update(){
     collide2.drawRect(0, 0, 50, 50);
 
 
-    collide1.x += 1;
-    collide2.x -= 1;
-    game.physics.arcade.overlap(collide1, collide2, handleCollide, null, this);
+   /* collide1.x += 1;
+    collide2.x -= 1;*/
+   // game.physics.arcade.overlap(collide1, collide2, handleCollide, null, this);
     
-    /*game.debug.body(collide1);
-    game.debug.body(collide2);*/
+    game.debug.body(collide1);
+    game.debug.body(collide2);
 
     /*console.log(collide1.body.position);
     console.log(collide2.body.position);
